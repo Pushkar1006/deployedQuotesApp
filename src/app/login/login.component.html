@@ -1,0 +1,21 @@
+<form class="container" [formGroup]="loginForm">
+    <div class="brown-text center"><h4>Login Details</h4></div>
+    <br/>
+
+    <span>
+        <label><h5><b class="black-text">Enter your email<span class="red-text">*</span> : </b></h5></label>
+        <input type="email" [formControl]="email"  />
+        <h6 class="red-text" [hidden]="email.valid || email.untouched">Enter correct email</h6>
+    </span>
+    <br/><br/>
+
+    <span>
+        <label><h5><b class="black-text">Enter your password<span class="red-text">*</span> : </b></h5></label>
+        <input type="password" [formControl]="password"  />
+        <h6 class="red-text" [hidden]="password.valid || password.untouched">Enter correct password of atleast 8 characters</h6>
+    </span>
+
+    <br/><br/>
+    <div ><button type="button" class="btn green" (click)="login()" [disabled]="loginForm.invalid">Login</button>
+    <button type="button" class="btn yellow black-text" (click)="reset()" style="margin: 2%;">Reset</button></div>
+</form>

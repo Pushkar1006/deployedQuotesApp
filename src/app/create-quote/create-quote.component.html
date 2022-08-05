@@ -1,0 +1,7 @@
+<form class="container" [formGroup]="quoteForm">
+    <label><h5><b>Your Quote: </b></h5></label>
+    <input type="text"  [formControl]="quote" />
+    <h6 class="red-text" [hidden]="quote.valid || quote.untouched">This field is required.</h6>
+    <button type="button" class="btn green" (click)="save()" [disabled]="quoteForm.invalid">Save</button>
+    <button type="button" class="btn yellow black-text" (click)="reset()" style="margin: 2%;">Reset</button>
+</form>

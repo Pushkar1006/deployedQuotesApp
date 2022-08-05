@@ -1,0 +1,7 @@
+<div class="container" style="background-color: lightsalmon;">
+    <!-- [class]="e ? 'yellow' : 'green'" -->
+    <div *ngFor="let q of allQuotes, even as e" [class]="e ? 'yellow' : 'lime'">
+        <h5>{{q.text}}</h5>
+        <h6 style="text-align: right;">-- {{q.by | usernamePipe}}</h6>
+    </div>
+</div>
